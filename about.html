@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Kedirile Holdings - Holdings Hands, Building Futures</title>
+    <meta name="description" content="Learn about Kedirile Holdings - our story, mission, values, and commitment to excellence in construction, logistics, and security services.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Color Palette */
+            --primary-black: #000000; /* Pure black */
+            --dark-grey: #2E2E2E;
+            --gold-primary: #C9A24D;
+            --gold-alt: #B8943E;
+            --gold-gradient: linear-gradient(135deg, #C9A24D 0%, #E6C878 50%, #B8943E 100%);
+            --black-gradient: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            --white: #FFFFFF;
+            --light-grey: #E5E5E5;
+            --background: #F8F9FA;
+            
+            /* Typography */
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Open Sans', sans-serif;
+            
+            /* Spacing */
+            --section-padding: 80px 20px;
+            --container-width: 1200px;
+            
+            /* Transitions */
+            --transition-fast: 0.3s ease;
+            --transition-slow: 0.8s ease;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--background);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: var(--section-padding);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-family: var(--heading-font);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            border: none;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: var(--primary-black);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #B8943E 0%, #D4B660 50%, #A5832D 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 162, 77, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-black);
+            transform: translateY(-2px);
+        }
+        
+        /* Fixed Contact Buttons */
+        .fixed-contact-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .fixed-contact-buttons {
+                display: flex;
+            }
+        }
+        
+        .fixed-contact-buttons a {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .call-button {
+            background: var(--gold-gradient);
+        }
+        
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        
+        /* Navigation - Pure Black */
+        .navbar {
+            background: #000000; /* Pure black */
+            color: var(--white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 15px 0;
+            transition: var(--transition-fast);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        /* Enlarged Logo in Top Left */
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .logo-img {
+            height: 65px; /* Default size */
+            width: auto;
+            transition: var(--transition-fast);
+            object-fit: contain;
+        }
+        
+        /* Make logo bigger on mobile */
+        @media (max-width: 768px) {
+            .logo {
+                height: 80px; /* Taller container for mobile */
+            }
+            
+            .logo-img {
+                height: 75px; /* Bigger on mobile */
+                max-width: 250px; /* Ensure it doesn't overflow */
+            }
+        }
+        
+        /* Make logo even bigger on very small screens */
+        @media (max-width: 480px) {
+            .logo {
+                height: 85px;
+            }
+            
+            .logo-img {
+                height: 80px;
+                max-width: 220px;
+            }
+        }
+        
+        /* Make logo slightly smaller on desktop for balance */
+        @media (min-width: 1200px) {
+            .logo-img {
+                height: 70px;
+            }
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--white);
+            position: absolute;
+            transition: var(--transition-fast);
+        }
+        
+        .menu-toggle span:nth-child(1) {
+            top: 0;
+        }
+        
+        .menu-toggle span:nth-child(2) {
+            top: 9px;
+        }
+        
+        .menu-toggle span:nth-child(3) {
+            top: 18px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light-grey);
+            font-family: var(--heading-font);
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold-primary);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: var(--transition-fast);
+        }
+        
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 100%;
+        }
+        
+        .nav-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background: #000000; /* Pure black */
+                flex-direction: column;
+                padding: 30px;
+                gap: 30px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-slow);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-contact {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-phone {
+                justify-content: center;
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            background: var(--black-gradient);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(201, 162, 77, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201, 162, 77, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(201, 162, 77, 0.08) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .hero-text {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .hero-text h5 {
+            color: var(--gold-primary);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--light-grey);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                margin-top: 110px; /* Adjusted for bigger logo */
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 450px;
+                margin-top: 120px; /* Adjusted for bigger logo */
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            color: var(--primary-black);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold-gradient);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        /* About Kedirile Section */
+        .about-kedirile {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .services-highlight {
+            background-color: var(--background);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+            border-left: 5px solid var(--gold-primary);
+        }
+        
+        .services-highlight h3 {
+            color: var(--primary-black);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .services-highlight h3 i {
+            color: var(--gold-primary);
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: var(--white);
+            border-radius: 6px;
+            transition: var(--transition-fast);
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-black);
+            font-size: 1.3rem;
+        }
+        
+        .service-text {
+            font-weight: 600;
+            color: var(--primary-black);
+        }
+        
+        .architecture-list {
+            margin-top: 40px;
+        }
+        
+        .architecture-list h4 {
+            color: var(--primary-black);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .architecture-list h4 i {
+            color: var(--gold-primary);
+        }
+        
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        @media (max-width: 576px) {
+            .architecture-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .architecture-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background-color: var(--background);
+            border-radius: 6px;
+            transition: var(--transition-fast);
+        }
+        
+        .architecture-item:hover {
+            background: var(--gold-gradient);
+            color: var(--primary-black);
+        }
+        
+        .architecture-item i {
+            color: var(--gold-primary);
+        }
+        
+        .architecture-item:hover i {
+            color: var(--primary-black);
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background: #000000;
+            color: var(--white);
+        }
+        
+        .mission-vision .section-header h2 {
+            color: var(--white);
+        }
+        
+        .mission-vision .section-header p {
+            color: var(--light-grey);
+        }
+        
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .mission-card {
+            background-color: var(--dark-grey);
+            padding: 50px 40px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition-fast);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mission-icon {
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+        }
+        
+        .mission-card h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .mission-card p {
+            color: var(--light-grey);
+        }
+        
+        /* Values Section */
+        .our-values {
+            background-color: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        @media (max-width: 992px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .value-card {
+            background-color: var(--background);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition-fast);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary-black);
+        }
+        
+        .value-card h3 {
+            color: var(--primary-black);
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            color: #666;
+        }
+        
+        /* Contact CTA Section */
+        .contact-cta {
+            background-color: var(--background);
+        }
+        
+        .contact-box {
+            background-color: var(--white);
+            padding: 60px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--gold-primary);
+        }
+        
+        .contact-box h2 {
+            color: var(--primary-black);
+            margin-bottom: 20px;
+        }
+        
+        .contact-box p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item i {
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #000000;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(201, 162, 77, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(201, 162, 77, 0.1) 0%, transparent 50%);
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            color: var(--light-grey);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #000000;
+            color: var(--light-grey);
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-tagline {
+            color: var(--gold-primary);
+            font-style: italic;
+            margin: 10px 0 15px;
+        }
+        
+        .footer-description {
+            color: var(--light-grey);
+            font-size: 0.95rem;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--light-grey);
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-primary);
+            padding-left: 5px;
+        }
+        
+        .footer-contact li,
+        .footer-hours li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact i,
+        .footer-hours li:before {
+            color: var(--gold-primary);
+            margin-right: 12px;
+            min-width: 20px;
+        }
+        
+        .footer-hours span {
+            font-weight: 600;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-fast);
+        }
+        
+        .footer-social a:hover {
+            background: var(--gold-gradient);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 5px;
+        }
+        
+        /* Animation Classes - SLOWER FADES */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered delays for sequential animation */
+        .fade-up.delay-1 {
+            transition-delay: 0.2s;
+        }
+        
+        .fade-up.delay-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .fade-up.delay-3 {
+            transition-delay: 0.6s;
+        }
+        
+        .fade-up.delay-4 {
+            transition-delay: 0.8s;
+        }
+        
+        .fade-up.delay-5 {
+            transition-delay: 1.0s;
+        }
+        
+        /* Fade in from left */
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Fade in from right */
+        .fade-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Scale in animation */
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Success Message */
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border-left: 4px solid #28a745;
+            display: none;
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border-left: 4px solid #dc3545;
+            display: none;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--white);
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Call/WhatsApp Buttons (Mobile) -->
+    <div class="fixed-contact-buttons">
+        <a href="tel:+27768986337" class="call-button">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/27768986337" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <!-- Enlarged Logo in Top Left Corner -->
+            <a href="index.html" class="logo">
+                <img src="gallery/logo1.jpg" alt="Kedirile Holdings Logo" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-contact">
+                    <a href="tel:+27768986337" class="nav-phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+2776 898 6337</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h5 class="fade-up">About Kedirile Holdings</h5>
+                <h1 class="fade-up delay-1">Holdings Hands, Building Futures</h1>
+                <p class="fade-up delay-2">For over a decade, we've been committed to excellence in construction, logistics, and security services, building lasting relationships and delivering exceptional results for our clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Kedirile Holdings Section -->
+    <section id="about" class="section about-kedirile">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>About Kedirile Holdings (PTY) LTD</h2>
+                <p>Holding Hands, Building Futures</p>
+            </div>
+            
+            <div class="about-content fade-up">
+                <p>At Kedirile Holdings, we believe in <strong>"Holding Hands, Building Futures."</strong> We are a dynamic, multi-disciplinary company dedicated to providing comprehensive solutions that span from initial design to final construction and ongoing support.</p>
+                
+                <p>Our expertise is built on a foundation of diverse services, allowing us to manage every aspect of a project seamlessly, ensuring quality, efficiency, and reliability at every stage.</p>
+                
+                <p>We specialize in designing and managing properties across key sectors. Whether it's shaping inspiring learning environments, creating modern living spaces, or developing functional commercial hubs, we are committed to turning visions into enduring structures.</p>
+                
+                <p>Based in <strong>Midstream, Centurion (Fountain 1692)</strong>, we are strategically positioned to serve clients with excellence and integrity. At Kedirile Holdings, we don't just build buildings—we build trust, community, and futures.</p>
+            </div>
+            
+            <div id="services" class="services-highlight fade-up">
+                <h3><i class="fas fa-list-check"></i> Our Comprehensive Services</h3>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-shuttle-van"></i>
+                        </div>
+                        <span class="service-text">Shuttle Service</span>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <span class="service-text">Track Experts</span>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <span class="service-text">Architecture</span>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <span class="service-text">Construction</span>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <span class="service-text">Logistics & Storage</span>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <span class="service-text">VIP Protection</span>
+                    </div>
+                </div>
+                
+                <div class="architecture-list fade-up">
+                    <h4><i class="fas fa-building"></i> We Design & Manage Properties</h4>
+                    <div class="architecture-grid">
+                        <div class="architecture-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education Architecture</span>
+                        </div>
+                        
+                        <div class="architecture-item">
+                            <i class="fas fa-home"></i>
+                            <span>Residential Architecture</span>
+                        </div>
+                        
+                        <div class="architecture-item">
+                            <i class="fas fa-building"></i>
+                            <span>Commercial Architecture</span>
+                        </div>
+                        
+                        <div class="architecture-item">
+                            <i class="fas fa-city"></i>
+                            <span>Mixed Use/Residential Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center fade-up">
+                <p><strong>Contact us today to start building with purpose.</strong></p>
+                <a href="tel:+27768986337" class="btn btn-primary" style="margin-top: 20px;">
+                    <i class="fas fa-phone"></i> +27 76 898 6337
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="section mission-vision">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>Our Mission & Vision</h2>
+                <p>Guiding principles that drive our operations and define our aspirations</p>
+            </div>
+            
+            <div class="mission-cards">
+                <div class="mission-card fade-up">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver exceptional, integrated solutions in construction, logistics, and security through innovation, professionalism, and unwavering commitment to quality. We strive to build lasting partnerships while creating value for our clients, employees, and communities.</p>
+                </div>
+                
+                <div class="mission-card fade-up">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading integrated holdings company in South Africa, recognized for excellence across all our service divisions. We envision a future where our diverse capabilities continue to grow, enabling us to meet the evolving needs of businesses and communities across the region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section id="values" class="section our-values">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide every decision and action at Kedirile Holdings</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrated Approach</h3>
+                    <p>We provide comprehensive solutions that span from initial design to final construction and ongoing support, managing every aspect seamlessly.</p>
+                </div>
+                
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality & Efficiency</h3>
+                    <p>We ensure quality, efficiency, and reliability at every stage of our projects, delivering exceptional results that stand the test of time.</p>
+                </div>
+                
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Client Partnership</h3>
+                    <p>We believe in "Holding Hands, Building Futures" - working closely with clients to understand their vision and bring it to life.</p>
+                </div>
+                
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3>Strategic Positioning</h3>
+                    <p>Based in Midstream, Centurion, we are strategically positioned to serve clients across the region with excellence and integrity.</p>
+                </div>
+                
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trust & Community</h3>
+                    <p>We don't just build buildings—we build trust, community, and futures, creating lasting value for everyone we work with.</p>
+                </div>
+                
+                <div class="value-card fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Purpose-Driven</h3>
+                    <p>Every project we undertake is driven by purpose, whether it's shaping learning environments or developing commercial hubs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="section contact-cta">
+        <div class="container">
+            <div class="contact-box fade-up">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Get in touch with our team to discuss how Kedirile Holdings can help bring your vision to life with our comprehensive range of services.</p>
+                
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Us a Message
+                </a>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+27768986337">+27 76 898 6337</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>CENTURION 1692, MIDSTREAM , GAUTENG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2 class="fade-up delay-1">Partner with Experience</h2>
+                <p class="fade-up delay-2">Join the growing list of satisfied clients who trust Kedirile Holdings for their construction, logistics, and security needs. Contact us today to discuss how we can support your next project.</p>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+27768986337" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Our Team
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Send Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col fade-up">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-text">
+                            <span class="logo-main">KEDIRILE</span>
+                            <span class="logo-sub">HOLDINGS</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Holdings Hands, Building Futures</p>
+                    <p class="footer-description">Providing premium construction, logistics, Shuttle Services and security services across South Africa with professionalism and excellence.</p>
+                </div>
+                
+                <div class="footer-col fade-up delay-1">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col fade-up delay-2">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+27768986337">+27 76 898 6337</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <!-- Email updated to kedirile139@gmail.com -->
+                            <a href="mailto:kedirile139@gmail.com">kedirile139@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1692, Midstream, Centurion</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col fade-up delay-3">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-hours">
+                        <li>Monday - Friday: <span>8:00 AM - 6:00 PM</span></li>
+                        <li>Saturday: <span>9:00 AM - 1:00 PM</span></li>
+                        <li>Sunday: <span>Emergency Only</span></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="scale-in delay-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="scale-in delay-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram" class="scale-in delay-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="scale-in delay-4"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom fade-up delay-4">
+                <p>&copy; <span id="currentYear"></span> Kedirile Holdings (PTY) Ltd. All rights reserved.</p>
+                <p>Website designed by Monarch Technologies Pty Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for About Page
+        
+        // DOM Elements
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const currentYear = document.getElementById('currentYear');
+        
+        // Set current year in footer
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+        
+        // Mobile Menu Toggle
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                
+                // Animate hamburger to X
+                const spans = menuToggle.querySelectorAll('span');
+                if (navMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+            
+            // Close menu when clicking a link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    const spans = menuToggle.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                });
+            });
+        }
+        
+        // Scroll Animation with slower transitions
+        const fadeElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, 100); // Small delay for smoother appearance
+                }
+            });
+        }, observerOptions);
+        
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Sticky navigation on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                navbar.style.padding = '10px 0';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+                navbar.style.padding = '15px 0';
+            }
+        });
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial fade-in for elements in viewport
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, 200);
+                }
+            });
+            
+            // Handle logo image loading from gallery folder
+            const logoImg = document.querySelector('.logo-img');
+            if (logoImg) {
+                // If logo1.jpg doesn't exist in gallery folder, show a placeholder
+                logoImg.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iNjAiIGZpbGw9IiMwMDAwMDAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjQ0lBQjREIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+S0VESVJJTEUgSE9MRElOR1M8L3RleHQ+PC9zdmc+';
+                    console.log('Logo not found at: gallery/logo1.jpg');
+                    console.log('Please ensure the logo file exists in the gallery folder.');
+                };
+                
+                // Log when logo loads successfully
+                logoImg.onload = function() {
+                    console.log('Logo loaded successfully from: gallery/logo1.jpg');
+                };
+            }
+            
+            // Add a subtle animation to the logo on load
+            setTimeout(() => {
+                if (logoImg) {
+                    logoImg.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        logoImg.style.transform = 'scale(1)';
+                    }, 300);
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
